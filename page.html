@@ -1,37 +1,194 @@
 <!DOCTYPE html>
-
-
-<style>
-left-header {
-justify-content: left;
-}
-
-right-header {
-    justify-content: right;
-}
-</style>
-
 <html>
-    <head></head>
-    <header>
-        
-            <div id=left-header>
-                <a href="https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header">About</a>
-            <a href="https://store.google.com/GB/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB">Store</a>
-            </div>
-        
-           <div id right-header><a href="https://gmail.com">Gmail</a>
-        <a href="https://www.google.co.uk/imghp?hl=en&ogbl">Images</a>
-        </div>
-        <img src=https://lh3.googleusercontent.com/a-/AOh14GgRoMBHJhFDEeevGCZmc3tve85LNTZDxalfavUYYNw=s96-c-rg-br100>
-    </header>
+<style>
+
+body{
+    font-family: 'Open sans';
+    height: 100%;
+    display: grid;
+}
+
+nav{
+    padding-bottom: 20px;
+    font-size: 12px;
+
+}
+footer{
+    font-size: 14px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(218, 218, 218);
+    background-color: #ebebeb;
+    bottom: 0;
+    position: absolute;
+    height: 35px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-left: -10px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+   float: right;
+}
+
+.profile {
+    width: 25px;
+}
+
+a.profile {
+    display: inline-block
+    color: #222
+    text-decoration: none
+}
+.footerlist{
+    font-size: 14px;
+    margin: 0px 0px 0px 0px;
+    color: #505050
+}
+
+li {
+    display: inline;
+    margin: 15px 25px 0px -10px;
+}
+
+.signin {
+    background-color: #4777fa;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    margin-top: 10px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+
+
+.center {
+    display: flex;
+    width: 100vh;
+    height: 50vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.searchcontents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo{
+  
+   margin-bottom: 25px;
+}
+
+.searchbar{
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+    padding: 10px 5px 10px 15px;
+    width: 550px;
+    height: 25px
+
+}
+
+input{
+   
+border: none;
+outline: none;
+margin: 50px;
+    margin-top: 0px;
+padding: 0;
+display: flex;
+flex: 100%;
+margin-top: -37px;
+height: 34px;
+font-size: 16px;
+}
+
+
+
+ .searchicon {
+    width: 20px;
+    opacity: 40%;
+}
+
+button{
+    background-color: #ebebeb;
+    border-style: none;
+    border-radius: 4px;
+    padding: 10px 15px 10px 15px;
+    margin-top: 30px; 
+    margin-left: 10px;
+    color: #505050;
+    font-size: 14px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+</style>   
+
+
+<head>
+        <title>Google</title>
+    </head>
     <body>
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-        <br>
-        <input type="search" src="http://www.w3.org/2000/svg" placeholder="Search">
-       <br>
-      <button>Google Search</button> <button>I'm Feeling Lucky</button>
-    
+        <nav>
+                <ul class="top">
+                    <li class="left">
+                        <a class="about" href="https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header">About</a>
+                    </li>
+                    <li class="left">Store</li>
+                    <li class="right"><a href="https://github.com/TarekVisch" target="_blank">
+                    <img class= "profile" src=https://lh3.googleusercontent.com/a-/AOh14GgRoMBHJhFDEeevGCZmc3tve85LNTZDxalfavUYYNw=s96-c-rg-br100></a></li>
+                    <li class="right">Images</li>
+                    <li class="right">Gmail</li>
+                </ul>
+        </nav>
+        <div class="center">
+            <div class="searchcontents">
+            
+            <form>
+                <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+                <div class="searchbar">
+                    <img class="searchicon" src="https://www.flaticon.com/svg/static/icons/svg/483/483356.svg">
+                    <input> <br/>
+                </div>
+                <div class="button">
+                    <button>Google Search</button> 
+                    <button>I'm Feeling Lucky</button>
+                </div>
+                </form>
+            </form>
+         </div>
+        </div>
+        <footer>
+            <ul class="footerlist">
+                <li class="left">Advertising</li>
+                <li class="left">Business</li>
+                <li class="left">How Search works</li>
+                <li class="right">Settings</li>
+                <li class="right">Terms</li>
+                <li class="right">Privacy</li>
+            </ul>
+        </footer>
     </body>
-    <footer></footer>
+
+
+
 </html>
