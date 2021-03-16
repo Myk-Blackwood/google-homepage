@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<style>
 
+<style>
 body{
     font-family: 'Open sans';
     height: 100%;
@@ -29,7 +29,7 @@ footer{
 
 a {
     text-decoration: none;
-    color:rgba(0, 0, 0, 0.87)
+    color:rgba(0, 0, 0, 0.87);
 
 }
 a:hover, a:active {
@@ -38,6 +38,7 @@ a:hover, a:active {
 
 .left {
  float: left;
+}
 
 .right {
    float: right;
@@ -175,7 +176,28 @@ form{
     border-bottom: 1px solid #dadce0;
     font-size: 15px;
     color: rgba(0,0,0,.54);
+}
 
-
-
+.space {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    box-sizing: border-box 100px;
+height : 520px
+}
+   
+.foot {
+    box-sizing:content-box;
+    display:inline;
+    float:none;
+    line-height:normal;
+    position:static;
+    z-index:auto;
+    background: #8a0a0ab2;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background-attachment: scroll;
+background-clip: border-box;
+}
+}
 </style>   
