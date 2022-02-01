@@ -5,14 +5,36 @@
 body{
     font-family: 'Open sans';
     height: 100%;
-    display: grid;
+    
 }
 
-nav{
+.nav-container{
+    background-color:rgb(223, 14, 14);
     padding-bottom: 20px;
     font-size: 12px;
+    display: flex;
 
 }
+
+.item{
+    flex-grow: ;
+    padding: 1rem;
+    
+}
+
+.about{
+    justify-self: self-start;
+    
+}
+
+.gmail{
+    justify-self: self-end;
+}
+
+profile{
+    grid-area: profile;
+}
+
 footer{
    
     flex: 0 1 300px;
@@ -40,7 +62,7 @@ a:hover, a:active {
 }
 
 .left {
-float:left;
+;
 }
 
 .right {
@@ -58,7 +80,6 @@ a.profile {
     color: #222;
     text-decoration: none;
 }
-
 
 li {
     display: inline;
