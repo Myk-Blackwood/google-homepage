@@ -1,144 +1,176 @@
-<!DOCTYPE html>
-<html>
-
 <style>
+
+
+/* Set the height of the page to the full
+hieght of the veiwport and set the font */
+
 body{
     font-family: 'Open sans';
     height: 100%;
+    font-size: 20px;
     
 }
 
-.nav-container{
-    background-color:rgb(223, 14, 14);
-    padding-bottom: 20px;
-    font-size: 12px;
+/* Start styling the nav bar.
+   Make a flex container and justify
+   content within.  */
+
+.headnav {
+    font-size: 13px;
     display: flex;
+    grid-template-areas: "1 2 3 4 5";
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-content: stretch;
+    height: 5vh;
 
 }
 
-.item{
-    flex-grow: ;
-    padding: 1rem;
+/*space between will justify the lefthead 
+  and righthead as they are the direct 
+  children. giving equal space between both.   */
+
+/* Create a flex containter that will
+   contain the links that will sit on the
+   left side of the header. Also creates a 
+   child of the main flex container*/
+
+.lefthead {
+    display:flex;
+    justify-content:flex-start;
+    position:relative;
+    top: -1em;
     
 }
 
-.about{
-    justify-self: self-start;
-    
+/* And then one for the links on the right.
+   Position: relative allows us to move the
+   item around its relative postion. Second 
+   child to main flex container.*/
+
+.righthead{
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    position:relative;
+    top:-1em;
+    left: 2em;
 }
 
-.gmail{
-    justify-self: self-end;
-}
-
-profile{
-    grid-area: profile;
-}
-
-footer{
-   
-    flex: 0 1 300px;
-    font-size: 14px;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-color: white;
-    bottom: 0;
-    position: absolute;
-    height: 35px;
-    padding-bottom: 10px;
-    width: 100%;
-    margin-left: -10px;
-    background-color: rgba(197, 194, 194, 0.54);;
-}
-
-
-a {
-    text-decoration: none;
-    color:rgba(0, 0, 0, 0.87);
-
-}
-a:hover, a:active {
-    text-decoration: underline;
-}
-
-.left {
-;
-}
-
-.right {
-   float: right;
-   
-}
-
-.profile {
-    width: 25px;
-    height:25px;
-}
-
-a.profile {
-    display: inline-block;
-    color: #222;
-    text-decoration: none;
-}
-
+/* set all the items into the same line
+   and set the spacing between them with 
+   marigins */
+ 
+ 
 li {
     display: inline;
     margin: 15px 25px 0px -10px;
 }
 
-.center {
+
+/* We can then set the size of the Profile
+image */
+
+.profile {
     display: flex;
-    width: 100vh;
-    height: 50vh;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 25px;
+    height: 25px;
 }
 
-.leaf {
-    width: 10px;
+.grid{
+    height: 15px;
+    width: 15px;
+}
+/* Next we style the links.
+   removinig the underline and colouring
+   the text black */
+
+.nav-item {
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.87);
+
 }
 
-.searchcontents{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+/*controls how the item acts when
+  the mouse hovers over it. in this
+  case the link will be underlined */
+
+a:hover, a:active {
+    text-decoration: underline;
 }
+
+.grid:hover {
+   
+    background-color: darkgrey; 
+    border: 10px solid grey;
+    border-radius: 50%;
+}
+
+/*Nav bar complete*/
+
+/*Create flex container for the logo and 
+  searchbar to move within*/
+
+form{ 
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+    height: 87vh;
+    width: 100vw;
+    
+}
+
 
 .logo{
   
-    margin-bottom: 25px;
-    position: relative;
-    left: 50px;
+    margin:190px auto 20px auto;
+    width: 272px;
+    height: 92px;
+
+    
 }
+
+.bar {
+    margin:0 auto;
+    width: 575px;
+    border-radius: 30px;
+    border: 1px solid rgb(218, 218, 218);
+}   
+
+.bar:hover {
+    box-shadow: 1px 1px 8px 1px; 
+
+}
+
 
 .searchbar{
+    
+    height:45px;
+    border:none;
+    width: 500px;
+    font-size:16px;
+    outline: none;
+    margin: 0 auto;
     position: relative;
-    left: 50px;
-    border-style: solid;
-    border-radius: 30px;
-    border-width: 1px;
-    border-color: rgb(218, 218, 218);
-    padding: 10px 5px 10px 15px;
-    width: 550px;
-    height: 25px
-
+    left:15px;
 }
 
-input {
-   
-    border: none;
-    outline: none;
-    margin: 50px;
-    margin-top: 0px;
-    padding: 0;
-    display: flex;
-    flex: 100%;
-    margin-top: -37px;
-    height: 34px;
-    font-size: 16px;
+
+.spyglass{
+    height: 20px;
+    position:relative;
+    top: 5px;
+    left: 10px;
+}
+
+
+.voice{
+    height: 20px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+
 }
 
  .searchicon {
@@ -146,48 +178,94 @@ input {
     opacity: 40%;
 }
 
-button:hover, button:active {
-    border: groove rgb(240, 239, 239);
-    pointer-events: ;
+
+.buttons{
+    margin:30px auto 0px auto;
+    font-size: 16px;
+    border:1px solid rgb(236, 235, 235);
+    border-radius: 100px;
+    
 }
 
 button{
-    position: relative;
-    left: 50px;
-    background-color: #ebebeb;
-    border-style: none;
-    border-radius: 4px;
-    padding: 10px 15px 10px 15px;
-    margin-top: 30px; 
-    margin-left: 10px;
-    color: #505050;
-    font-size: 14px;
-}
- 
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+   
+    border:1px solid rgb(236, 235, 235);
+    border-radius: 5px;
+    color:rgb(70, 70, 70);
+    background-color:rgb(236, 235, 235);
+    padding:9px 19px;
+    
 }
 
+button:hover {
+    border: 1px solid rgb(200, 200, 200);
+    padding:9px 19px;
+    border-radius: 5px;
+    
+}
+
+.footnav1{
+    font-size: 12px;
+    display: flex;
+    grid-template-areas: "1 2 3 4 5";
+    flex-basis: 100%;
+    justify-content:start;
+    align-items: end;
+    height: 3vh;
+    background-color: rgb(236, 236, 236);
+    border-bottom: 1px solid rgb(200, 200, 200);
+
+}
+
+.footnav2 {
+    font-size: 12px;
+    display: flex;
+    grid-template-areas: "1 2 3 4 5";
+    flex-basis: 100%;
+    justify-items: space-between;
+    align-content: stretch;
+    height: 3vh;
+    background-color: rgb(236, 236, 236);
+   
+}
+    
 .carbon {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-bottom: -20px;
+    margin:5px auto;
+    width:20vw;
+    
+    
+    
 
+}
+
+.leaf {
+    margin:0 0 0 0;
+    height: 10px;
 }
 
 .left-foot {
-    float: left;
-    font-size: 14px;
+    display: inline-block;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    position:relative;
+    width:40vw
+  
 }
 
 .right-foot{
-    float: right;
-    font-size: 14px;
-
+    Display:flex;
+    justify-content: end;
+    align-items:center;
+    width:40vw;
+    
+    
 }
 
-</style>   
+footer{
+    width: 100vw;
+   
+   
+}
+
+</style>
