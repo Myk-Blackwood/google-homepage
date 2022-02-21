@@ -1,13 +1,14 @@
-<style>
 
 
-/* Set the height of the page to the full
-hieght of the veiwport and set the font */
+* {
+    box-sizing: border-box;
+}
 
 body{
     font-family: 'Open sans';
     font-size: 20px;
-    
+    display:flex;
+    flex-direction: column;
 }
 
 /* Start styling the nav bar.
@@ -17,9 +18,8 @@ body{
 .headnav {
     font-size: 13px;
     display: flex;
-    
-
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*space between will justify the lefthead 
@@ -31,10 +31,6 @@ body{
    left side of the header. Also creates a 
    child of the main flex container*/
 
-.nav-item.push {
-    margin: 0 auto;
-    
-}
 
 /* And then one for the links on the right.
    Position: relative allows us to move the
@@ -48,11 +44,19 @@ body{
    marigins */
  
  
-li {
-    display: inline;
-    flex:auto;
-    border: 1px solid red
+
     
+    
+ul {
+    list-style-type: none;
+    display:flex;
+    gap: 8px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -61,22 +65,19 @@ image */
 
 .profile {
     width: 25px;
-    height: 25px;
+    height: auto;
+
 }
 
 .grid{
-    height: 15px;
+    height: auto;
     width: 15px;
 }
 /* Next we style the links.
    removinig the underline and colouring
    the text black */
 
-.nav-item {
-    text-decoration: none;
-    color:rgba(0, 0, 0, 0.87);
 
-}
 
 /*controls how the item acts when
   the mouse hovers over it. in this
@@ -103,10 +104,7 @@ a:hover, a:active {
 form{ 
     display:flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: start;
-    height: 89vh;
-    width: 100vw;
+    margin-bottom: 33%;
     
 }
 
@@ -193,14 +191,20 @@ button:hover {
     
 }
 
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
 .footnav1{
     font-size: 12px;
     display: flex;
-    grid-template-areas: "1 2 3 4 5";
-    flex-basis: 100%;
+    flex: auto;
     justify-content:start;
-    align-items: end;
-    height: 3vh;
+    align-items: center;
     background-color: rgb(236, 236, 236 );
     border-bottom: 1px solid rgb(200, 200, 200);
     min-height: 40px;
@@ -210,53 +214,43 @@ button:hover {
 .footnav2 {
     font-size: 12px;
     display: flex;
-    grid-template-areas: "1 2 3 4 5";
-    flex-basis: 100%;
-    justify-items: space-between;
-    align-content: stretch;
-    height: 3vh;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(236, 236, 236);
     min-height: 40px;
+    
+
+    
 
 }
     
 .carbon {
-    display:flex;
-    margin:5px auto;
-    width:20vw;
-    justify-content: center;
+    flex:auto;
+    padding-left: 100px;
+    
     
 
 }
 
 .leaf {
-    margin:0 0 0 0;
+    width:auto;
     height: 10px;
 }
 
 .left-foot {
-    display: inline-block;
-    display: flex;
-    justify-items: flex-start;
-    align-items: center;
-    position:relative;
-    width:40vw
+    flex:auto;
+    
+    
   
 }
 
 .right-foot{
-    Display:flex;
-    justify-content: end;
-    align-items:center;
-    width:40vw;
-    
+    flex:auto;
+    padding: 0px;
+    justify-content: flex-end;
     
 }
 
-footer{
-    width: 100vw;
    
    
 }
-
-</style>
